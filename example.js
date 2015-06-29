@@ -7,11 +7,7 @@ var child = {
   src: "http://lorempixel.com/g/300/169/food",
   href: "http://www.google.com"
 };
-var child2 = {
-  caption: "First caption",
-  src: "http://lorempixel.com/g/300/169/food",
-  href: "http://www.google.com"
-};
+
 
 export default (
   <TabView>
