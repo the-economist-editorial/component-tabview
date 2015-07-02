@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@economist/component-devpack": "^1.4.1",
-    "@economist/component-devserver": "^1.5.1",
+    "@economist/component-devserver": "^1.5.0",
     "@economist/component-testharness": "^1.0.0",
     "babel": "^5.5.8",
     "babelify": "^6.1.2",

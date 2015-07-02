@@ -52,12 +52,12 @@ export default class TabView extends React.Component {
   }
 
 
-    _handleClick(selectedIndex, event) {
-      if(selectedIndex >= this.props.children.length){
-        selectedIndex = 0;
-      }
-     this.setState({
-      selectedIndex
-      });
+  _handleClick(selectedIndex, event) {
+    if(selectedIndex >= this.props.children.length){
+      selectedIndex = 0;
+    }
+   this.setState({
+    selectedIndex
+    });
   }
 }

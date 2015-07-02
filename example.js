@@ -11,7 +11,7 @@ var child = {
 
 export default (
   <TabView>
-    <div title="Politics">
+    <div title="Business & Finance">
     <div className="TabView--Views--Tint"></div>
     <a href={child.href}>
          <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
@@ -26,7 +26,7 @@ export default (
          <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
     </a>
     </div>
-    <div title="Business & Economics">
+    <div title="Politics">
     <div className="TabView--Views--Tint"></div>
      <a href={child.href}>
          <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
@@ -41,7 +41,7 @@ export default (
          <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
     </a>
     </div>
-    <div title="Science & technology">
+    <div title="Science & Technology">
     <div className="TabView--Views--Tint"></div>
      <a href={child.href}>
          <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
