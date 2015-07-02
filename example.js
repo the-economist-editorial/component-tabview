@@ -1,6 +1,6 @@
 import React from 'react';
 import TabView from './';
-import ImageCaption from './../component-imagecaption';
+import ImageCaption from '@economist/component-imagecaption';
 
 var child = {
   caption: "First caption",
@@ -14,61 +14,61 @@ export default (
     <div title="Business & Finance">
     <div className="TabView--Views--Tint"></div>
     <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content"  caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
     </div>
     <div title="Politics">
     <div className="TabView--Views--Tint"></div>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
     </div>
     <div title="Science & Technology">
     <div className="TabView--Views--Tint"></div>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
     </div>
     <div title="History">
     <div className="TabView--Views--Tint"></div>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
      <a href={child.href}>
-         <ImageCaption caption={child.caption} src={child.src}></ImageCaption>
+         <ImageCaption className="TabView--View--Content" caption={child.caption} src={child.src}></ImageCaption>
     </a>
     </div>
   </TabView>

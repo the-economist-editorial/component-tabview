@@ -1,13 +1,17 @@
 @import '@economist/component-gridcss';
 @import '@economist/component-customfonts';
 
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 ul, li, .TabView--View--Content {
   padding: 0;
   margin: 0;
 }
 
 .TabView {
-  font-family: Neutra2Text-book;
   background-color: #393f43;
   max-width: 1200px;
   overflow: hidden;
@@ -30,7 +34,7 @@ ul, li, .TabView--View--Content {
 @media only screen and (max-width: 560px) {
   .TabView:before {
     /*padding-top: 83%;*/
-    padding-top: 70%;
+    padding-top: 73%;
   }
 }
 
@@ -46,11 +50,12 @@ ul, li, .TabView--View--Content {
 .TabView--Header {
   background-color: #393f43;
   height: 30%;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 560px) {
   .TabView--Header {
-    height: 15%;
+    height: 21%;
   }
 }
 
@@ -178,7 +183,7 @@ ul, li, .TabView--View--Content {
 
 @media only screen and (max-width: 560px) {
   .TabView--Views--Container {
-    height: 85%;
+    height: 78%;
   }
 }
 
@@ -186,6 +191,7 @@ ul, li, .TabView--View--Content {
   height: 100%;
   position: relative;
   left: 0;
+  background-color: #000;
 }
 
 .TabView--View {
@@ -204,12 +210,20 @@ ul, li, .TabView--View--Content {
   left: 0px;
 }
 
+
+/*@media only screen and (max-width: 560px) {
+  .TabView--View, .TabView--View[data-active="true"] {
+  margin-top: 4px;
+  }
+}*/
+
 .TabView--View--Content {
   height: 100%;
   width: 25%;
   display: inline-block;
   position: relative;
   cursor: pointer;
+  background-color: #000;
 }
 
 @media only screen and (max-width: 560px) {
@@ -229,6 +243,7 @@ ul, li, .TabView--View--Content {
 @media only screen and (max-width: 560px) {
   .TabView--View--Content img {
     width: 100%;
+/*    margin-top: -4px;*/
   }
 }
 
@@ -266,6 +281,13 @@ ul, li, .TabView--View--Content {
   width: 100%;
   height: 100%;
 }
+
+/*@media only screen and (max-width: 560px) {
+  .TabView--Views--Tint {
+  margin-top: -4px;
+  }
+}*/
+
 
 .TabView--View:nth-child(1) .TabView--Views--Tint {
   background-color: rgba(7, 197, 178, 0.2);
