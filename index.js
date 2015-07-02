@@ -17,7 +17,7 @@ export default class TabView extends React.Component {
     return (
       <div className="TabView section group">
       <div className="TabView--Container">
-        <header className="TabView--Header span_10 margin_1">
+        <header className="TabView--Header span_7 margin_1">
           <ul className="TabView--Tabs">
             {this.props.children.map((child, index) => {
               return (
