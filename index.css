@@ -25,18 +25,6 @@ ul, li, .TabView--View--Content {
   padding-top: 18.5%;
 }
 
-@media only screen and (max-width: 800px) {
-  .TabView:before {
-    padding-top: 23%;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  .TabView:before {
-    /*padding-top: 83%;*/
-    padding-top: 73%;
-  }
-}
 
 .TabView > .TabView--Container {
   position: absolute;
@@ -53,11 +41,7 @@ ul, li, .TabView--View--Content {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 560px) {
-  .TabView--Header {
-    height: 21%;
-  }
-}
+
 
 .TabView--Tabs {
   list-style: none;
@@ -80,47 +64,7 @@ ul, li, .TabView--View--Content {
   line-height: 22px;
 }
 
-@media only screen and (max-width: 1020px) {
-  .TabView--Tab, .TabView--Tab[data-active="true"] {
-    font-size: 18px;
-    padding-top: 5px;
-    line-height: 18px;
-  }
-}
 
-@media only screen and (max-width: 800px) {
-  .TabView--Tab, .TabView--Tab[data-active="true"] {
-   height: 40px;
-   width: 150px;
-   padding-top: 8px;
-  }
-}
-
-
-
-
-@media only screen and (max-width: 1020px) {
-   .TabView .span_7 {
-  width: 82.66% !important;
-  }
-}
-
-
-@media only screen and (max-width: 800px) {
-   .TabView .margin_1 {
-  margin-left: 0% !important;
-  }
-}
-
-
-
-@media only screen and (max-width: 560px) {
-  .TabView--Tab, .TabView--Tab[data-active="true"] {
-    width: 46%;
-    border-right: none;
-    padding-top: 12px;
-  }
-}
 
 .TabView--Tab:hover {
   background-color: #4F575C;
@@ -162,29 +106,9 @@ ul, li, .TabView--View--Content {
   display: none;
 }
 
-@media only screen and (max-width: 800px) {
-  .TabView--Tab[data-active="true"] {
-    display: inline-table;
-    border-right: none;
-  }
-  .TabView--Tab {
-    display: none;
-  }
-
-  .TabView--Tab:nth-child(5) {
-    display: inline-table;
-  }
-}
-
 .TabView--Views--Container {
   height: 70%;
   background-color: #000;
-}
-
-@media only screen and (max-width: 560px) {
-  .TabView--Views--Container {
-    height: 78%;
-  }
 }
 
 .TabView--Views {
@@ -210,13 +134,6 @@ ul, li, .TabView--View--Content {
   left: 0px;
 }
 
-
-/*@media only screen and (max-width: 560px) {
-  .TabView--View, .TabView--View[data-active="true"] {
-  margin-top: 4px;
-  }
-}*/
-
 .TabView--View--Content {
   height: 100%;
   width: 25%;
@@ -226,27 +143,11 @@ ul, li, .TabView--View--Content {
   background-color: #000;
 }
 
-@media only screen and (max-width: 560px) {
-  .TabView--View--Content {
-    width: 50%;
-    height: 50%;
-  }
-}
-
-
 .TabView--View--Content img {
   height: 100%;
   width: 100%;
   opacity: 0.6;
 }
-
-@media only screen and (max-width: 560px) {
-  .TabView--View--Content img {
-    width: 100%;
-/*    margin-top: -4px;*/
-  }
-}
-
 
 .TabView--View--Content img:hover {
   opacity: 1;
@@ -266,12 +167,6 @@ ul, li, .TabView--View--Content {
 }
 
 
-@media only screen and (max-width: 1080px) {
-  .TabView figcaption {
-  left: 10px;
-  font-size: 18px;
-  }
-}
 
 
 .TabView--Views--Tint {
@@ -281,12 +176,6 @@ ul, li, .TabView--View--Content {
   width: 100%;
   height: 100%;
 }
-
-/*@media only screen and (max-width: 560px) {
-  .TabView--Views--Tint {
-  margin-top: -4px;
-  }
-}*/
 
 
 .TabView--View:nth-child(1) .TabView--Views--Tint {
@@ -303,4 +192,79 @@ ul, li, .TabView--View--Content {
 
 .TabView--View:nth-child(4) .TabView--Views--Tint {
   background-color: rgba(78, 100, 181, 0.2);
+}
+@media only screen and (max-width: 1080px) {
+  .TabView figcaption {
+  left: 10px;
+  font-size: 18px;
+  }
+}
+
+
+@media only screen and (max-width: 1020px) {
+  .TabView--Tab, .TabView--Tab[data-active="true"] {
+    font-size: 18px;
+    padding-top: 5px;
+    line-height: 18px;
+  }
+   .TabView .span_7 {
+  width: 82.66% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .TabView--Tab, .TabView--Tab[data-active="true"] {
+   height: 40px;
+   width: 150px;
+   padding-top: 8px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .TabView:before {
+    padding-top: 23%;
+  }
+   .TabView .margin_1 {
+  margin-left: 0% !important;
+  }
+  .TabView--Tab[data-active="true"] {
+    display: inline-table;
+    border-right: none;
+  }
+  .TabView--Tab {
+    display: none;
+  }
+  .TabView--Tab:nth-child(5) {
+    display: inline-table;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .TabView {
+    margin-bottom: -4px;
+  }
+  .TabView:before {
+    /*padding-top: 83%;*/
+    padding-top: 73%;
+  }
+  .TabView--Header {
+    height: 20%;
+  }
+  .TabView--Tab, .TabView--Tab[data-active="true"] {
+    width: 46%;
+    border-right: none;
+    padding-top: 12px;
+  }
+  .TabView--Views--Container {
+    height: 80%;
+    overflow: hidden;
+  }
+  .TabView--View--Content {
+    width: 50%;
+    height: 50%;
+  }
+  .TabView--View--Content img {
+    width: 100%;
+    margin-top: -4px;
+  }
 }
