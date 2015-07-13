@@ -1,63 +1,96 @@
-import React from 'react';
+"use strict";
 
-export default class TabView extends React.Component {
+exports.__esModule = true;
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-   constructor(props) {
-    super(props);
-    const selectedIndex = this.props.selectedIndex || 0;
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var TabView = (function (_React$Component) {
+  function TabView(props) {
+    _classCallCheck(this, TabView);
+
+    _React$Component.call(this, props);
+    var selectedIndex = this.props.selectedIndex || 0;
     this.state = {
-      selectedIndex
+      selectedIndex: selectedIndex
     };
   }
 
+  _inherits(TabView, _React$Component);
 
-  render() {
-    return (
-      <div className="TabView section group">
-      <div className="TabView--Container">
-        <header className="TabView--Header span_7 margin_1">
-          <ul className="TabView--Tabs">
-            {this.props.children.map((child, index) => {
-              return (
-                <li
-                  key={index} className="TabView--Tab"
-                  data-active={this.state.selectedIndex === index}
-                  onClick={this._handleClick.bind(this, index) }>
-                  {child.props.title}
-                </li>
+  TabView.prototype.render = function render() {
+    var _this = this;
+
+    return _react2["default"].createElement(
+      "div",
+      { className: "TabView section group" },
+      _react2["default"].createElement(
+        "div",
+        { className: "TabView--Container" },
+        _react2["default"].createElement(
+          "header",
+          { className: "TabView--Header span_7 margin_1" },
+          _react2["default"].createElement(
+            "ul",
+            { className: "TabView--Tabs" },
+            this.props.children.map(function (child, index) {
+              return _react2["default"].createElement(
+                "li",
+                {
+                  key: index, className: "TabView--Tab",
+                  "data-active": _this.state.selectedIndex === index,
+                  onClick: _this._handleClick.bind(_this, index) },
+                child.props.title
               );
-            })}
-          <li onClick={this._handleClick.bind(this, (this.state.selectedIndex+1)) } className="TabView--Tab">More</li>
-          </ul>
-        </header>
-          <div className="TabView--Views--Container">
-          <div className="TabView--Views">
-            {this.props.children.map((child, index) => {
-              return (
-                <div
-                  key={index}
-                  className="TabView--View"
-                  data-active={this.state.selectedIndex === index}>
-                  {child.props.children}
-                </div>
+            }),
+            _react2["default"].createElement(
+              "li",
+              { onClick: this._handleClick.bind(this, this.state.selectedIndex + 1), className: "TabView--Tab" },
+              "More"
+            )
+          )
+        ),
+        _react2["default"].createElement(
+          "div",
+          { className: "TabView--Views--Container" },
+          _react2["default"].createElement(
+            "div",
+            { className: "TabView--Views" },
+            this.props.children.map(function (child, index) {
+              return _react2["default"].createElement(
+                "div",
+                {
+                  key: index,
+                  className: "TabView--View",
+                  "data-active": _this.state.selectedIndex === index },
+                child.props.children
               );
-            })}
-          </div>
-        </div>
-        </div>
-      </div>
+            })
+          )
+        )
+      )
     );
-  }
+  };
 
-
-  _handleClick(selectedIndex, event) {
-    if(selectedIndex >= this.props.children.length){
+  TabView.prototype._handleClick = function _handleClick(selectedIndex, event) {
+    if (selectedIndex >= this.props.children.length) {
       selectedIndex = 0;
     }
-   this.setState({
-    selectedIndex
+    this.setState({
+      selectedIndex: selectedIndex
     });
-  }
-}
+  };
+
+  return TabView;
+})(_react2["default"].Component);
+
+exports["default"] = TabView;
+module.exports = exports["default"];
+

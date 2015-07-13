@@ -1,15 +1,5 @@
 @import '@economist/component-gridcss';
-@import '@economist/component-customfonts';
-
-
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-}
-
-ul, li, .TabView--View--Content {
-  padding: 0;
-  margin: 0;
-}
+@import '@economist/component-font-neutra2';
 
 .TabView {
   background-color: #393f43;
@@ -18,13 +8,17 @@ ul, li, .TabView--View--Content {
   position: relative;
 }
 
+.TabView ul, li, .TabView--View--Content {
+  padding: 0;
+  margin: 0;
+}
+
 .TabView:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 18.5%;
 }
-
 
 .TabView > .TabView--Container {
   position: absolute;
@@ -41,8 +35,6 @@ ul, li, .TabView--View--Content {
   overflow: hidden;
 }
 
-
-
 .TabView--Tabs {
   list-style: none;
   height: 101%;
@@ -50,7 +42,7 @@ ul, li, .TabView--View--Content {
 }
 
 .TabView--Tab, .TabView--Tab[data-active="true"] {
-  font-family: Neutra2Display-Medium;
+  font-family: "Neutra2Display-Medium";
   padding: 10px 0 12px 10px;
   text-transform: uppercase;
   display: table-cell;
@@ -63,8 +55,6 @@ ul, li, .TabView--View--Content {
   vertical-align: bottom;
   line-height: 22px;
 }
-
-
 
 .TabView--Tab:hover {
   background-color: #4F575C;
@@ -154,7 +144,7 @@ ul, li, .TabView--View--Content {
 }
 
 .TabView figcaption {
-  font-family: Neutra2Display-Titling;
+  font-family: "Neutra2Display-Titling";
   position: absolute;
   pointer-events: none;
   bottom: 10px;
@@ -166,9 +156,6 @@ ul, li, .TabView--View--Content {
   z-index: 10;
 }
 
-
-
-
 .TabView--Views--Tint {
   pointer-events: none;
   position: absolute;
@@ -176,7 +163,6 @@ ul, li, .TabView--View--Content {
   width: 100%;
   height: 100%;
 }
-
 
 .TabView--View:nth-child(1) .TabView--Views--Tint {
   background-color: rgba(7, 197, 178, 0.2);
