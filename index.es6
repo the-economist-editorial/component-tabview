@@ -1,14 +1,30 @@
 import React from 'react';
 export default class TabView extends React.Component {
 
+
+  static get propTypes() {
+    return {
+      selectedIndex: React.PropTypes.string,
+      children: React.PropTypes.string,
+    };
+  }
+
    constructor(props) {
     super(props);
     const selectedIndex = this.props.selectedIndex || 0;
     this.state = {
-      selectedIndex
+      selectedIndex,
     };
   }
 
+  handleClick(selectedIndex) {
+    if (selectedIndex >= this.props.children.length) {
+      selectedIndex = 0;
+    }
+    this.setState({
+      selectedIndex,
+    });
+  }
   render() {
     return (
       <div className="TabView section group">
@@ -20,12 +36,12 @@ export default class TabView extends React.Component {
                 <li
                   key={index} className="TabView--Tab"
                   data-active={this.state.selectedIndex === index}
-                  onClick={this._handleClick.bind(this, index) }>
+                  onClick={this.handleClick.bind(this, index) }>
                   {child.props.title}
                 </li>
               );
             })}
-          <li onClick={this._handleClick.bind(this, (this.state.selectedIndex+1)) } className="TabView--Tab">More</li>
+          <li onClick={this.handleClick.bind(this, (this.state.selectedIndex + 1)) } className="TabView--Tab">More</li>
           </ul>
         </header>
           <div className="TabView--Views--Container">
@@ -45,14 +61,5 @@ export default class TabView extends React.Component {
         </div>
       </div>
     );
-  }
-
-  _handleClick(selectedIndex, event) {
-    if(selectedIndex >= this.props.children.length){
-      selectedIndex = 0;
-    }
-   this.setState({
-    selectedIndex
-    });
   }
 }

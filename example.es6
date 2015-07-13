@@ -1,13 +1,5 @@
 import React from 'react';
 import TabView from './index.es6';
-import ImageCaption from '@economist/component-imagecaption';
-
-var child = {
-  caption: "First caption",
-  src: "http://lorempixel.com/g/300/169/food",
-  href: "http://www.google.com"
-};
-
 
 export default (
   <TabView>
