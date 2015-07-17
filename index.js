@@ -2,6 +2,8 @@
 
 exports.__esModule = true;
 
+var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -13,6 +15,18 @@ var _react = require("react");
 var _react2 = _interopRequireDefault(_react);
 
 var TabView = (function (_React$Component) {
+  _inherits(TabView, _React$Component);
+
+  _createClass(TabView, null, [{
+    key: "propTypes",
+    get: function get() {
+      return {
+        selectedIndex: _react2["default"].PropTypes.string,
+        children: _react2["default"].PropTypes.string
+      };
+    }
+  }]);
+
   function TabView(props) {
     _classCallCheck(this, TabView);
 
@@ -23,7 +37,14 @@ var TabView = (function (_React$Component) {
     };
   }
 
-  _inherits(TabView, _React$Component);
+  TabView.prototype.handleClick = function handleClick(selectedIndex) {
+    if (selectedIndex >= this.props.children.length) {
+      selectedIndex = 0;
+    }
+    this.setState({
+      selectedIndex: selectedIndex
+    });
+  };
 
   TabView.prototype.render = function render() {
     var _this = this;
@@ -46,13 +67,13 @@ var TabView = (function (_React$Component) {
                 {
                   key: index, className: "TabView--Tab",
                   "data-active": _this.state.selectedIndex === index,
-                  onClick: _this._handleClick.bind(_this, index) },
+                  onClick: _this.handleClick.bind(_this, index) },
                 child.props.title
               );
             }),
             _react2["default"].createElement(
               "li",
-              { onClick: this._handleClick.bind(this, this.state.selectedIndex + 1), className: "TabView--Tab" },
+              { onClick: this.handleClick.bind(this, this.state.selectedIndex + 1), className: "TabView--Tab" },
               "More"
             )
           )
@@ -77,15 +98,6 @@ var TabView = (function (_React$Component) {
         )
       )
     );
-  };
-
-  TabView.prototype._handleClick = function _handleClick(selectedIndex, event) {
-    if (selectedIndex >= this.props.children.length) {
-      selectedIndex = 0;
-    }
-    this.setState({
-      selectedIndex: selectedIndex
-    });
   };
 
   return TabView;

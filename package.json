@@ -14,8 +14,8 @@
   },
   "main": "index.js",
   "files": [
-  "index.js",
-  "index.css"
+    "index.js",
+    "index.css"
   ],
   "eslintConfig": {
     "extends": "strict/react"
@@ -71,7 +71,7 @@
     "react": "^0.13.3"
   },
   "devDependencies": {
-    "@economist/component-devpack": "^2.1.1",
+    "@economist/component-devpack": "^2.5.0",
     "@economist/component-devserver": "^2.0.0",
     "@economist/component-imagecaption": "",
     "@economist/component-testharness": "^1.1.0",
