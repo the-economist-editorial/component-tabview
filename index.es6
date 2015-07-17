@@ -27,39 +27,40 @@ export default class TabView extends React.Component {
   }
   render() {
     return (
-      <div className="TabView section group">
-      <div className="TabView--Container">
-        <header className="TabView--Header span_7 margin_1">
-          <ul className="TabView--Tabs">
-            {this.props.children.map((child, index) => {
-              return (
-                <li
-                  key={index} className="TabView--Tab"
-                  data-active={this.state.selectedIndex === index}
-                  onClick={this.handleClick.bind(this, index) }>
-                  {child.props.title}
-                </li>
-              );
-            })}
-          <li onClick={this.handleClick.bind(this, (this.state.selectedIndex + 1)) } className="TabView--Tab">More</li>
-          </ul>
-        </header>
+      <aside className="TabView section group">
+        <div className="TabView--Container">
+          <header className="TabView--Header span_7 margin_1">
+            <ul className="TabView--Tabs">
+              {this.props.children.map((child, index) => {
+                return (
+                  <li
+                    key={index} className="TabView--Tab"
+                    data-active={this.state.selectedIndex === index}
+                    onClick={this.handleClick.bind(this, index) }>
+                    {child.props.title}
+                  </li>
+                );
+              })}
+              <li onClick={this.handleClick.bind(this, (this.state.selectedIndex + 1)) }
+              className="TabView--Tab">More</li>
+            </ul>
+          </header>
           <div className="TabView--Views--Container">
-          <div className="TabView--Views">
-            {this.props.children.map((child, index) => {
-              return (
-                <div
-                  key={index}
-                  className="TabView--View"
-                  data-active={this.state.selectedIndex === index}>
-                  {child.props.children}
-                </div>
-              );
-            })}
+            <div className="TabView--Views">
+              {this.props.children.map((child, index) => {
+                return (
+                  <div
+                    key={index}
+                    className="TabView--View"
+                    data-active={this.state.selectedIndex === index}>
+                    {child.props.children}
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
-        </div>
-      </div>
+      </aside>
     );
   }
 }
