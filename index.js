@@ -10,7 +10,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) subClass.__proto__ = superClass; }
 
-var _react = require("react");
+var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -50,14 +50,14 @@ var TabView = (function (_React$Component) {
     var _this = this;
 
     return _react2["default"].createElement(
-      "div",
+      "aside",
       { className: "TabView section group" },
       _react2["default"].createElement(
         "div",
         { className: "TabView--Container" },
         _react2["default"].createElement(
           "header",
-          { className: "TabView--Header span_7 margin_1" },
+          { className: "TabView--Header" },
           _react2["default"].createElement(
             "ul",
             { className: "TabView--Tabs" },
@@ -73,7 +73,8 @@ var TabView = (function (_React$Component) {
             }),
             _react2["default"].createElement(
               "li",
-              { onClick: this.handleClick.bind(this, this.state.selectedIndex + 1), className: "TabView--Tab" },
+              { onClick: this.handleClick.bind(this, this.state.selectedIndex + 1),
+                className: "TabView--Tab" },
               "More"
             )
           )

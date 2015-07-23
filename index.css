@@ -31,14 +31,13 @@
 
 .TabView--Header {
   background-color: #393f43;
-  height: 30%;
+  height: 20%;
   overflow: hidden;
 }
 
 .TabView--Tabs {
   list-style: none;
   height: 101%;
- /* position: relative;*/
 }
 
 .TabView--Tab, .TabView--Tab[data-active="true"] {
@@ -97,7 +96,7 @@
 }
 
 .TabView--Views--Container {
-  height: 70%;
+  height: 80%;
   background-color: #000;
 }
 

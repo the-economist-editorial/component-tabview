@@ -1,7 +1,6 @@
 import React from 'react';
 export default class TabView extends React.Component {
 
-
   static get propTypes() {
     return {
       selectedIndex: React.PropTypes.string,
@@ -29,7 +28,7 @@ export default class TabView extends React.Component {
     return (
       <aside className="TabView section group">
         <div className="TabView--Container">
-          <header className="TabView--Header span_7 margin_1">
+          <header className="TabView--Header col-12">
             <ul className="TabView--Tabs">
               {this.props.children.map((child, index) => {
                 return (

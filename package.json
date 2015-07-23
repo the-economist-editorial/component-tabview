@@ -14,8 +14,9 @@
   },
   "main": "index.js",
   "files": [
-    "index.js",
-    "index.css"
+    "*.js",
+    "*.css",
+    "assets/*"
   ],
   "eslintConfig": {
     "extends": "strict/react"
@@ -59,8 +60,9 @@
     "lint_opts": "--ignore-path .gitignore --ext .es6"
   },
   "scripts": {
+    "build": "npm-assets .",
     "lint": "eslint $npm_package_config_lint_opts .",
-    "prepublish": "babel index.es6 --stage=0 --loose > index.js",
+    "prepublish": "babel index.es6 --source-maps=inline --stage=0 --loose > index.js",
     "provision": "devpack-configure ./package.json",
     "serve": "component-devserver .",
     "test": "npm run test:base -- -R tap",
@@ -68,8 +70,8 @@
     "test:watch": "npm run test:base -- -wR min"
   },
   "dependencies": {
-    "@economist/component-gridcss": "^1.0.1",
-    "@economist/component-font-neutra2": "^1.0.1",
+    "@economist/component-font-neutra2": "^1.0.4",
+    "@economist/component-gridcss": "^2.0.0",
     "react": "^0.13.3"
   },
   "devDependencies": {
@@ -85,6 +87,7 @@
     "eslint-plugin-react": "^2.6.3",
     "minifyify": "^7.0.1",
     "mocha": "^2.2.5",
+    "npm-assets": "^0.1.0",
     "pre-commit": "^1.0.10"
   },
   "pre-commit": [
