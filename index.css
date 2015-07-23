@@ -206,7 +206,7 @@
   .TabView--Tab[data-active="true"] {
     display: inline-table;
     border-right: none;
-    width: 34%;
+    width: calc(34% - 20px);
   }
   .TabView--Tab {
     display: none;
@@ -216,7 +216,7 @@
   }
   .TabView--Tab:nth-child(5):hover {
     background: none;
-    width: calc(66% - 19px);
+    width: calc(66% - 20px);
     background-color: #4F575C;
   }
 }
@@ -227,9 +227,6 @@
   .TabView:before {
     padding-top: 73%;
   }
-  /*.TabView--Header {
-    height: 20%;
-  }*/
   .TabView--Tab, .TabView--Tab[data-active="true"] {
     width: calc(50% - 20px);
     border-right: none;
@@ -252,7 +249,7 @@
   }
   .TabView--Tab:nth-child(5):hover {
     background: none;
-    width: calc(50% - 19px);
+    width: calc(50% - 20px);
     background-color: #dedede;
   }
 }
