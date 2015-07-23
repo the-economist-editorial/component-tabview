@@ -2,7 +2,6 @@
 @import '@economist/component-font-neutra2';
 
 .TabView {
-  background-color: #393f43;
   max-width: 1200px;
   overflow: hidden;
   position: relative;
@@ -31,7 +30,6 @@
 
 .TabView--Header {
   background-color: #393f43;
-  height: 20%;
   overflow: hidden;
 }
 
@@ -42,17 +40,17 @@
 
 .TabView--Tab, .TabView--Tab[data-active="true"] {
   font-family: "Neutra2Display-Medium";
-  padding: 10px 0 12px 10px;
+  padding: 10px 0 10px 10px;
   text-transform: uppercase;
   display: table-cell;
   color: #929CA2;
   width: 18%;
   border-right: 1px solid #929CA2;
   cursor: pointer;
-  background-color: #000;
+  background-color: #ddd;
   font-size: 22px;
-  vertical-align: bottom;
-  line-height: 22px;
+  line-height: 25px;
+  height: 100%;
 }
 
 .TabView--Tab:hover {
@@ -179,42 +177,36 @@
   background-color: rgba(78, 100, 181, 0.2);
 }
 @media only screen and (max-width: 1080px) {
-  .TabView figcaption {
-  left: 10px;
-  font-size: 18px;
-  }
-}
-
-
-@media only screen and (max-width: 1020px) {
   .TabView--Tab, .TabView--Tab[data-active="true"] {
     font-size: 18px;
-    padding-top: 5px;
     line-height: 18px;
+    padding: 11px 10px 10px 10px;
   }
-   .TabView .span_7 {
-  width: 82.66% !important;
+  .TabView figcaption {
+    left: 10px;
+    font-size: 18px;
   }
 }
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 950px) {
   .TabView--Tab, .TabView--Tab[data-active="true"] {
-   height: 40px;
-   width: 150px;
-   padding-top: 8px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .TabView figcaption {
+    font-size: 16px;
   }
 }
-
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 840px) {
   .TabView:before {
     padding-top: 23%;
   }
-   .TabView .margin_1 {
-  margin-left: 0% !important;
+  .TabView .margin_1 {
+    margin-left: 0% !important;
   }
   .TabView--Tab[data-active="true"] {
     display: inline-table;
     border-right: none;
+    width: 34%;
   }
   .TabView--Tab {
     display: none;
@@ -222,26 +214,29 @@
   .TabView--Tab:nth-child(5) {
     display: inline-table;
   }
+  .TabView--Tab:nth-child(5):hover {
+    background: none;
+    width: calc(66% - 19px);
+    background-color: #4F575C;
+  }
 }
-
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 570px) {
   .TabView {
     margin-bottom: -4px;
   }
   .TabView:before {
-    /*padding-top: 83%;*/
     padding-top: 73%;
   }
-  .TabView--Header {
+  /*.TabView--Header {
     height: 20%;
-  }
+  }*/
   .TabView--Tab, .TabView--Tab[data-active="true"] {
-    width: 46%;
+    width: calc(50% - 20px);
     border-right: none;
     padding-top: 12px;
   }
   .TabView--Views--Container {
-    height: 80%;
+    height: 91%;
     overflow: hidden;
   }
   .TabView--View--Content {
@@ -251,5 +246,22 @@
   .TabView--View--Content img {
     width: 100%;
     margin-top: -4px;
+  }
+  .TabView--Tab:nth-child(5) {
+    width: calc(50% - 20px);
+  }
+  .TabView--Tab:nth-child(5):hover {
+    background: none;
+    width: calc(50% - 19px);
+    background-color: #dedede;
+  }
+}
+@media only screen and (max-width: 470px) {
+   .TabView--Header {
+    height: 20%;
+  }
+  .TabView--Views--Container {
+    height: 82%;
+    overflow: hidden;
   }
 }
