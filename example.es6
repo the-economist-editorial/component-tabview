@@ -4,7 +4,6 @@ import TabView from './index.es6';
 export default (
   <TabView>
     <div title="Politics">
-      <div className="TabView--Views--Tint"></div>
       <a href="#">
         <figure className="TabView--View--Content">
           <img src="http://lorempixel.com/g/300/169/cats"/>
@@ -31,7 +30,6 @@ export default (
       </a>
     </div>
     <div title="Business & Economics">
-      <div className="TabView--Views--Tint"></div>
       <a href="#">
         <figure className="TabView--View--Content">
           <img src="http://lorempixel.com/g/300/169/food"/>
@@ -58,7 +56,6 @@ export default (
       </a>
     </div>
     <div title="Science & technology">
-      <div className="TabView--Views--Tint"></div>
       <a href="#">
         <figure className="TabView--View--Content">
           <img src="http://lorempixel.com/g/300/169/transport"/>
@@ -85,7 +82,6 @@ export default (
       </a>
     </div>
     <div title="History">
-      <div className="TabView--Views--Tint"></div>
       <a href="#">
         <figure className="TabView--View--Content">
           <img src="http://lorempixel.com/g/300/169/nightlife"/>
