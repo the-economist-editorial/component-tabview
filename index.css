@@ -74,11 +74,11 @@
 
 .TabView--Tab[data-active="true"] {
   color: #fff;
-  background-color: #08c5b2
+  background-color: #e3120b;
 }
 
 .TabView--Tab:nth-child(2)[data-active="true"] {
-  background-color: #e3120b;
+  background-color: #08c5b2;
 }
 
 .TabView--Tab:nth-child(3)[data-active="true"] {
