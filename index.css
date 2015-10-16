@@ -1,5 +1,4 @@
 .TabView {
-  overflow: hidden;
   position: relative;
 }
 
@@ -10,29 +9,13 @@
   margin: 0;
 }
 
-.TabView:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: 18.5%;
-}
-
-.TabView--Container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-}
-
-.TabView--Header {
-  overflow: hidden;
-}
-
 .TabView--Tabs {
   list-style: none;
   height: 101%;
+}
+
+.TabView--Container {
+  overflow: hidden;
 }
 
 .TabView--Tab,
@@ -56,7 +39,7 @@
 }
 
 .TabView--Views {
-  height: 100%;
+  height: var(--TabView-inner-height, 200px);
   position: relative;
   left: 0;
 }
@@ -76,10 +59,15 @@
   left: 0px;
 }
 
-.TabView--View--Content {
-  height: 100%;
-  width: 25%;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
+@media only screen and (max-width: 840px) {
+  .TabView--Tab[data-active="true"] {
+    display: inline-table;
+    border-right: none;
+  }
+  .TabView--Tab {
+    display: none;
+  }
+  .TabView--more {
+    display: inline-table;
+  }
 }

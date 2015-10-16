@@ -1,10 +1,31 @@
 /* Added .world-if  prefix just for example/dev only, remove before production */
 .world-if .TabView {
+  overflow: hidden;
   max-width: 1200px;
 }
 
 .world-if .TabView--Header {
   background-color: #393f43;
+  overflow: hidden;
+}
+
+.world-if .TabView:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 18.5%;
+}
+
+.world-if .TabView--Container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.TabView--Header {
   overflow: hidden;
 }
 
@@ -86,6 +107,14 @@
   z-index: 10;
 }
 
+.world-if .TabView--View--Content {
+  height: 100%;
+  width: 25%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1080px) {
   .world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
     font-size: 18px;
@@ -116,17 +145,11 @@
     margin-left: 0% !important;
   }
   .world-if .TabView--Tab[data-active="true"] {
-    display: inline-table;
     border-right: none;
     width: calc(34% - 20px);
   }
-  .world-if .TabView--Tab {
-    display: none;
-  }
-  .world-if .TabView--Tab:nth-child(5) {
-    display: inline-table;
-  }
-  .world-if .TabView--Tab:nth-child(5):hover {
+  .world-if .TabView--more,
+  .world-if .TabView--more:hover {
     background: none;
     width: calc(66% - 20px);
     background-color: #4F575C;
@@ -156,10 +179,10 @@
     width: 100%;
     margin-top: -4px;
   }
-  .world-if .TabView--Tab:nth-child(5) {
+  .world-if .TabView--more {
     width: calc(50% - 20px);
   }
-  .world-if .TabView--Tab:nth-child(5):hover {
+  .world-if .TabView--more:hover {
     background: none;
     width: calc(50% - 20px);
     background-color: #dedede;

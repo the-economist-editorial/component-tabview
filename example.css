@@ -2,3 +2,9 @@
 @import '@economist/component-font-neutra2';
 @import 'index.css';
 @import 'world-if.css';
+
+.generic-example .TabView--View a {
+  display: block;
+  float: left;
+  max-width: 25%;
+}
