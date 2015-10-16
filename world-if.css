@@ -1,0 +1,176 @@
+/* Added .world-if  prefix just for example/dev only, remove before production */
+.world-if .TabView {
+  max-width: 1200px;
+}
+
+.world-if .TabView--Header {
+  background-color: #393f43;
+  overflow: hidden;
+}
+
+.world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+  font-family: "Neutra2Display-Medium";
+  padding: 10px 0 10px 10px;
+  text-transform: uppercase;
+  color: #929CA2;
+  border-right: 1px solid #929CA2;
+  background-color: #ddd;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.world-if .TabView--Tab:hover {
+  background-color: #4F575C;
+}
+
+.world-if .TabView--Tab:nth-last-child(1) {
+  background: rgb(0,0,0); /* Old browsers */
+}
+
+.world-if .TabView--Tab[data-active="true"] {
+  color: #fff;
+  background-color: #e3120b;
+}
+
+.world-if .TabView--Tab:nth-child(2)[data-active="true"] {
+  background-color: #08c5b2;
+}
+
+.world-if .TabView--Tab:nth-child(3)[data-active="true"] {
+  background-color: #f39200;
+}
+
+.world-if .TabView--Tab:nth-child(4)[data-active="true"] {
+  background-color: #4e64b5;
+}
+
+.world-if .TabView--Views--Container {
+  height: 80%;
+  background-color: #000;
+}
+
+.world-if .TabView--Views {
+  height: 100%;
+  position: relative;
+  left: 0;
+}
+
+.world-if .TabView--View {
+  background-color: #000;
+}
+
+.world-if .TabView--View--Content {
+  background-color: #000;
+}
+
+.world-if .TabView--View--Content img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.world-if .TabView--View--Content img:hover {
+  opacity: 1;
+}
+
+.world-if .TabView figcaption {
+  font-family: "Neutra2Display-Titling";
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  left: 20px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow:  2px 2px 3px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+@media only screen and (max-width: 1080px) {
+  .world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 11px 10px 10px 10px;
+  }
+  .world-if .TabView figcaption {
+    left: 10px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .world-if .TabView figcaption {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .world-if .TabView:before {
+    padding-top: 23%;
+  }
+  .world-if .TabView .margin_1 {
+    margin-left: 0% !important;
+  }
+  .world-if .TabView--Tab[data-active="true"] {
+    display: inline-table;
+    border-right: none;
+    width: calc(34% - 20px);
+  }
+  .world-if .TabView--Tab {
+    display: none;
+  }
+  .world-if .TabView--Tab:nth-child(5) {
+    display: inline-table;
+  }
+  .world-if .TabView--Tab:nth-child(5):hover {
+    background: none;
+    width: calc(66% - 20px);
+    background-color: #4F575C;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .world-if .TabView {
+    margin-bottom: -4px;
+  }
+  .world-if .TabView:before {
+    padding-top: 73%;
+  }
+  .world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+    width: calc(50% - 20px);
+    border-right: none;
+    padding-top: 12px;
+  }
+  .world-if .TabView--Views--Container {
+    height: 91%;
+    overflow: hidden;
+  }
+  .world-if .TabView--View--Content {
+    width: 50%;
+    height: 50%;
+  }
+  .world-if .TabView--View--Content img {
+    width: 100%;
+    margin-top: -4px;
+  }
+  .world-if .TabView--Tab:nth-child(5) {
+    width: calc(50% - 20px);
+  }
+  .world-if .TabView--Tab:nth-child(5):hover {
+    background: none;
+    width: calc(50% - 20px);
+    background-color: #dedede;
+  }
+}
+@media only screen and (max-width: 470px) {
+   .world-if .TabView--Header {
+    height: 20%;
+  }
+  .world-if .TabView--Views--Container {
+    height: 82%;
+    overflow: hidden;
+  }
+}
