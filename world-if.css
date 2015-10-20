@@ -1,22 +1,21 @@
-/* Added .world-if  prefix just for example/dev only, remove before production */
-.world-if .TabView {
+.WorldIfApp .TabView {
   overflow: hidden;
   max-width: 1200px;
 }
 
-.world-if .TabView--Header {
+.WorldIfApp .TabView--Header {
   background-color: #393f43;
   overflow: hidden;
 }
 
-.world-if .TabView:before {
+.WorldIfApp .TabView:before {
   display: block;
   content: "";
   width: 100%;
   padding-top: 18.5%;
 }
 
-.world-if .TabView--Container {
+.WorldIfApp .TabView--Container {
   position: absolute;
   top: 0;
   left: 0;
@@ -25,17 +24,17 @@
   height: 100%;
 }
 
-.world-if .TabView--Views {
+.WorldIfApp .TabView--Views {
   overflow-y: hidden;
   overflow-x: hidden;
 }
 
-.world-if .TabView--Header {
+.WorldIfApp .TabView--Header {
   overflow: hidden;
 }
 
-.world-if .TabView--Tab,
-.world-if .TabView--Tab[data-active="true"] {
+.WorldIfApp .TabView--Tab,
+.WorldIfApp .TabView--Tab[data-active="true"] {
   font-family: "Neutra2Display-Medium";
   padding: 10px 0 10px 10px;
   text-transform: uppercase;
@@ -47,69 +46,69 @@
   width: 18%;
 }
 
-.world-if .TabView--Tab:hover {
+.WorldIfApp .TabView--Tab:hover {
   background-color: #4F575C;
 }
 
-.world-if .TabView--Tab:nth-last-child(1) {
+.WorldIfApp .TabView--Tab:nth-last-child(1) {
   background: rgb(0,0,0); /* Old browsers */
 }
 
-.world-if .TabView--Tab:nth-last-child(2) {
+.WorldIfApp .TabView--Tab:nth-last-child(2) {
   border-right: none;
 }
 
-.world-if .TabView--Tab:nth-last-child(1) {
+.WorldIfApp .TabView--Tab:nth-last-child(1) {
   border-right: none;
 }
 
-.world-if .TabView--Tab[data-active="true"] {
+.WorldIfApp .TabView--Tab[data-active="true"] {
   color: #fff;
   background-color: #e3120b;
 }
 
-.world-if .TabView--Tab:nth-child(2)[data-active="true"] {
+.WorldIfApp .TabView--Tab:nth-child(2)[data-active="true"] {
   background-color: #08c5b2;
 }
 
-.world-if .TabView--Tab:nth-child(3)[data-active="true"] {
+.WorldIfApp .TabView--Tab:nth-child(3)[data-active="true"] {
   background-color: #f39200;
 }
 
-.world-if .TabView--Tab:nth-child(4)[data-active="true"] {
+.WorldIfApp .TabView--Tab:nth-child(4)[data-active="true"] {
   background-color: #4e64b5;
 }
 
-.world-if .TabView--Views--Container {
+.WorldIfApp .TabView--Views--Container {
   height: 80%;
   background-color: #000;
 }
 
-.world-if .TabView--Views {
+.WorldIfApp .TabView--Views {
   height: 100%;
   position: relative;
   left: 0;
 }
 
-.world-if .TabView--View {
+.WorldIfApp .TabView--View {
   background-color: #000;
 }
 
-.world-if .TabView--View--Content {
+.WorldIfApp .TabView--View--Content {
   background-color: #000;
 }
 
-.world-if .TabView--View--Content img {
+.WorldIfApp .TabView--View--Content img {
   height: 100%;
   width: 100%;
   opacity: 0.8;
 }
 
-.world-if .TabView--View--Content img:hover {
+.WorldIfApp .TabView--View--Content img:hover {
   opacity: 1;
 }
 
-.world-if .TabView figcaption {
+.WorldIfApp .TabView figcaption {
   font-family: "Neutra2Display-Titling";
   position: absolute;
   pointer-events: none;
@@ -122,7 +121,7 @@
   z-index: 10;
 }
 
-.world-if .TabView--View--Content {
+.WorldIfApp .TabView--View--Content {
   height: 100%;
   width: 25%;
   display: inline-block;
@@ -131,83 +130,83 @@
 }
 
 @media only screen and (max-width: 1080px) {
-  .world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+  .WorldIfApp .TabView--Tab, .WorldIfApp .TabView--Tab[data-active="true"] {
     font-size: 18px;
     line-height: 18px;
     padding: 11px 10px 10px 10px;
   }
-  .world-if .TabView figcaption {
+  .WorldIfApp .TabView figcaption {
     left: 10px;
     font-size: 18px;
   }
 }
 
 @media only screen and (max-width: 950px) {
-  .world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+  .WorldIfApp .TabView--Tab, .WorldIfApp .TabView--Tab[data-active="true"] {
     font-size: 16px;
     line-height: 16px;
   }
-  .world-if .TabView figcaption {
+  .WorldIfApp .TabView figcaption {
     font-size: 16px;
   }
 }
 
 @media only screen and (max-width: 840px) {
-  .world-if .TabView:before {
+  .WorldIfApp .TabView:before {
     padding-top: 23%;
   }
-  .world-if .TabView .margin_1 {
+  .WorldIfApp .TabView .margin_1 {
     margin-left: 0% !important;
   }
-  .world-if .TabView--Tab[data-active="true"] {
+  .WorldIfApp .TabView--Tab[data-active="true"] {
     border-right: none;
     width: calc(34% - 20px);
   }
-  .world-if .TabView--more,
-  .world-if .TabView--more:hover {
+  .WorldIfApp .TabView--more,
+  .WorldIfApp .TabView--more:hover {
     background: none;
     width: calc(66% - 20px);
     background-color: #4F575C;
   }
 }
 @media only screen and (max-width: 570px) {
-  .world-if .TabView {
+  .WorldIfApp .TabView {
     margin-bottom: -4px;
   }
-  .world-if .TabView:before {
+  .WorldIfApp .TabView:before {
     padding-top: 73%;
   }
-  .world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+  .WorldIfApp .TabView--Tab, .WorldIfApp .TabView--Tab[data-active="true"] {
     width: calc(50% - 20px);
     border-right: none;
     padding-top: 12px;
   }
-  .world-if .TabView--Views--Container {
+  .WorldIfApp .TabView--Views--Container {
     height: 91%;
     overflow: hidden;
   }
-  .world-if .TabView--View--Content {
+  .WorldIfApp .TabView--View--Content {
     width: 50%;
     height: 50%;
   }
-  .world-if .TabView--View--Content img {
+  .WorldIfApp .TabView--View--Content img {
     width: 100%;
     margin-top: -4px;
   }
-  .world-if .TabView--more {
+  .WorldIfApp .TabView--more {
     width: calc(50% - 20px);
   }
-  .world-if .TabView--more:hover {
+  .WorldIfApp .TabView--more:hover {
     background: none;
     width: calc(50% - 20px);
     background-color: #dedede;
   }
 }
 @media only screen and (max-width: 470px) {
-   .world-if .TabView--Header {
+   .WorldIfApp .TabView--Header {
     height: 20%;
   }
-  .world-if .TabView--Views--Container {
+  .WorldIfApp .TabView--Views--Container {
     height: 82%;
     overflow: hidden;
   }

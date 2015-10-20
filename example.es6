@@ -93,7 +93,7 @@ export default (
       </TabView>
     </div>
     <p>Original World if version</p>
-    <div className="world-if">
+    <div className="WorldIfApp">
       <TabView>
         <div title="Politics">
           <a href="#">

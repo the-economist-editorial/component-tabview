@@ -65,7 +65,7 @@ exports['default'] = _react2['default'].createElement(
   ),
   _react2['default'].createElement(
     'div',
-    { className: 'world-if' },
+    { className: 'WorldIfApp' },
     _react2['default'].createElement(
       _index2['default'],
       null,
