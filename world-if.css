@@ -25,11 +25,17 @@
   height: 100%;
 }
 
-.TabView--Header {
+.world-if .TabView--Views {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.world-if .TabView--Header {
   overflow: hidden;
 }
 
-.world-if .TabView--Tab, .world-if .TabView--Tab[data-active="true"] {
+.world-if .TabView--Tab,
+.world-if .TabView--Tab[data-active="true"] {
   font-family: "Neutra2Display-Medium";
   padding: 10px 0 10px 10px;
   text-transform: uppercase;
@@ -38,6 +44,7 @@
   background-color: #ddd;
   font-size: 22px;
   line-height: 25px;
+  width: 18%;
 }
 
 .world-if .TabView--Tab:hover {
@@ -46,6 +53,14 @@
 
 .world-if .TabView--Tab:nth-last-child(1) {
   background: rgb(0,0,0); /* Old browsers */
+}
+
+.world-if .TabView--Tab:nth-last-child(2) {
+  border-right: none;
+}
+
+.world-if .TabView--Tab:nth-last-child(1) {
+  border-right: none;
 }
 
 .world-if .TabView--Tab[data-active="true"] {

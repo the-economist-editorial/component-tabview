@@ -21,17 +21,8 @@
 .TabView--Tab,
 .TabView--Tab[data-active="true"] {
   display: table-cell;
-  width: 18%;
   cursor: pointer;
   height: 100%;
-}
-
-.TabView--Tab:nth-last-child(2) {
-  border-right: none;
-}
-
-.TabView--Tab:nth-last-child(1) {
-  border-right: none;
 }
 
 .TabView--more {
@@ -39,9 +30,11 @@
 }
 
 .TabView--Views {
-  height: var(--TabView-inner-height, 200px);
+  height: var(--TabView-inner-height, 400px);
   position: relative;
   left: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .TabView--View {
