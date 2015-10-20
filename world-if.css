@@ -1,0 +1,213 @@
+.WorldIfApp .TabView {
+  overflow: hidden;
+  max-width: 1200px;
+}
+
+.WorldIfApp .TabView--Header {
+  background-color: #393f43;
+  overflow: hidden;
+}
+
+.WorldIfApp .TabView:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 18.5%;
+}
+
+.WorldIfApp .TabView--Container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.WorldIfApp .TabView--Views {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.WorldIfApp .TabView--Header {
+  overflow: hidden;
+}
+
+.WorldIfApp .TabView--Tab,
+.WorldIfApp .TabView--Tab[data-active="true"] {
+  font-family: "Neutra2Display-Medium";
+  padding: 10px 0 10px 10px;
+  text-transform: uppercase;
+  color: #929CA2;
+  border-right: 1px solid #929CA2;
+  background-color: #ddd;
+  font-size: 22px;
+  line-height: 25px;
+  width: 18%;
+}
+
+.WorldIfApp .TabView--Tab:hover {
+  background-color: #4F575C;
+}
+
+.WorldIfApp .TabView--Tab:nth-last-child(1) {
+  background: rgb(0,0,0); /* Old browsers */
+}
+
+.WorldIfApp .TabView--Tab:nth-last-child(2) {
+  border-right: none;
+}
+
+.WorldIfApp .TabView--Tab:nth-last-child(1) {
+  border-right: none;
+}
+
+.WorldIfApp .TabView--Tab[data-active="true"] {
+  color: #fff;
+  background-color: #e3120b;
+}
+
+.WorldIfApp .TabView--Tab:nth-child(2)[data-active="true"] {
+  background-color: #08c5b2;
+}
+
+.WorldIfApp .TabView--Tab:nth-child(3)[data-active="true"] {
+  background-color: #f39200;
+}
+
+.WorldIfApp .TabView--Tab:nth-child(4)[data-active="true"] {
+  background-color: #4e64b5;
+}
+
+.WorldIfApp .TabView--Views--Container {
+  height: 80%;
+  background-color: #000;
+}
+
+.WorldIfApp .TabView--Views {
+  height: 100%;
+  position: relative;
+  left: 0;
+}
+
+.WorldIfApp .TabView--View {
+  background-color: #000;
+}
+
+.WorldIfApp .TabView--View--Content {
+  background-color: #000;
+}
+
+.WorldIfApp .TabView--View--Content img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.WorldIfApp .TabView--View--Content img:hover {
+  opacity: 1;
+}
+
+.WorldIfApp .TabView figcaption {
+  font-family: "Neutra2Display-Titling";
+  position: absolute;
+  pointer-events: none;
+  bottom: 10px;
+  left: 20px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow:  2px 2px 3px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.WorldIfApp .TabView--View--Content {
+  height: 100%;
+  width: 25%;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1080px) {
+  .WorldIfApp .TabView--Tab, .WorldIfApp .TabView--Tab[data-active="true"] {
+    font-size: 18px;
+    line-height: 18px;
+    padding: 11px 10px 10px 10px;
+  }
+  .WorldIfApp .TabView figcaption {
+    left: 10px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .WorldIfApp .TabView--Tab, .WorldIfApp .TabView--Tab[data-active="true"] {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  .WorldIfApp .TabView figcaption {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .WorldIfApp .TabView:before {
+    padding-top: 23%;
+  }
+  .WorldIfApp .TabView .margin_1 {
+    margin-left: 0% !important;
+  }
+  .WorldIfApp .TabView--Tab[data-active="true"] {
+    border-right: none;
+    width: calc(34% - 20px);
+  }
+  .WorldIfApp .TabView--more,
+  .WorldIfApp .TabView--more:hover {
+    background: none;
+    width: calc(66% - 20px);
+    background-color: #4F575C;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .WorldIfApp .TabView {
+    margin-bottom: -4px;
+  }
+  .WorldIfApp .TabView:before {
+    padding-top: 73%;
+  }
+  .WorldIfApp .TabView--Tab, .WorldIfApp .TabView--Tab[data-active="true"] {
+    width: calc(50% - 20px);
+    border-right: none;
+    padding-top: 12px;
+  }
+  .WorldIfApp .TabView--Views--Container {
+    height: 91%;
+    overflow: hidden;
+  }
+  .WorldIfApp .TabView--View--Content {
+    width: 50%;
+    height: 50%;
+  }
+  .WorldIfApp .TabView--View--Content img {
+    width: 100%;
+    margin-top: -4px;
+  }
+  .WorldIfApp .TabView--more {
+    width: calc(50% - 20px);
+  }
+  .WorldIfApp .TabView--more:hover {
+    background: none;
+    width: calc(50% - 20px);
+    background-color: #dedede;
+  }
+}
+@media only screen and (max-width: 470px) {
+   .WorldIfApp .TabView--Header {
+    height: 20%;
+  }
+  .WorldIfApp .TabView--Views--Container {
+    height: 82%;
+    overflow: hidden;
+  }
+}

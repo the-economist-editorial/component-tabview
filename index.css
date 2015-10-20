@@ -1,36 +1,12 @@
-@import '@economist/component-gridcss';
-@import '@economist/component-font-neutra2';
-
 .TabView {
-  max-width: 1200px;
-  overflow: hidden;
   position: relative;
 }
 
-.TabView ul, li, .TabView--View--Content {
+.TabView ul,
+.TabView  li,
+.TabView--View--Content {
   padding: 0;
   margin: 0;
-}
-
-.TabView:before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: 18.5%;
-}
-
-.TabView > .TabView--Container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-}
-
-.TabView--Header {
-  background-color: #393f43;
-  overflow: hidden;
 }
 
 .TabView--Tabs {
@@ -38,71 +14,27 @@
   height: 101%;
 }
 
-.TabView--Tab, .TabView--Tab[data-active="true"] {
-  font-family: "Neutra2Display-Medium";
-  padding: 10px 0 10px 10px;
-  text-transform: uppercase;
+.TabView--Container {
+  overflow: hidden;
+}
+
+.TabView--Tab,
+.TabView--Tab[data-active="true"] {
   display: table-cell;
-  color: #929CA2;
-  width: 18%;
-  border-right: 1px solid #929CA2;
   cursor: pointer;
-  background-color: #ddd;
-  font-size: 22px;
-  line-height: 25px;
   height: 100%;
 }
 
-.TabView--Tab:hover {
-  background-color: #4F575C;
-}
-
-.TabView--Tab:nth-last-child(2) {
-  border-right: none;
-}
-
-.TabView--Tab:nth-last-child(1) {
-  background: rgb(0,0,0); /* Old browsers */
-  background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(57,63,67,1) 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(57,63,67,1))); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(57,63,67,1) 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(57,63,67,1) 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(57,63,67,1) 100%); /* IE10+ */
-  background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(57,63,67,1) 100%); /* W3C */
-  border-right: none;
-}
-
-.TabView--Tab[data-active="true"] {
-  color: #fff;
-  background-color: #e3120b;
-}
-
-.TabView--Tab:nth-child(2)[data-active="true"] {
-  background-color: #08c5b2;
-}
-
-.TabView--Tab:nth-child(3)[data-active="true"] {
-  background-color: #f39200;
-}
-
-.TabView--Tab:nth-child(4)[data-active="true"] {
-  background-color: #4e64b5;
-}
-
-.TabView--Tab:nth-child(5) {
+.TabView--more {
   display: none;
 }
 
-.TabView--Views--Container {
-  height: 80%;
-  background-color: #000;
-}
-
 .TabView--Views {
-  height: 100%;
+  height: var(--TabView-inner-height, 400px);
   position: relative;
   left: 0;
-  background-color: #000;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .TabView--View {
@@ -112,7 +44,6 @@
   position: absolute;
   transition: left 0.5s ease-in-out 0.5s;
   left: 100%;
-  background-color: #000;
 }
 
 .TabView--View[data-active="true"] {
@@ -121,121 +52,15 @@
   left: 0px;
 }
 
-.TabView--View--Content {
-  height: 100%;
-  width: 25%;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  background-color: #000;
-}
-
-.TabView--View--Content img {
-  height: 100%;
-  width: 100%;
-  opacity: 0.8;
-}
-
-.TabView--View--Content img:hover {
-  opacity: 1;
-}
-
-.TabView figcaption {
-  font-family: "Neutra2Display-Titling";
-  position: absolute;
-  pointer-events: none;
-  bottom: 10px;
-  left: 20px;
-  color: #fff;
-  font-size: 20px;
-  text-transform: uppercase;
-  text-shadow:  2px 2px 3px rgba(0, 0, 0, 0.5);
-  z-index: 10;
-}
-
-@media only screen and (max-width: 1080px) {
-  .TabView--Tab, .TabView--Tab[data-active="true"] {
-    font-size: 18px;
-    line-height: 18px;
-    padding: 11px 10px 10px 10px;
-  }
-  .TabView figcaption {
-    left: 10px;
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 950px) {
-  .TabView--Tab, .TabView--Tab[data-active="true"] {
-    font-size: 16px;
-    line-height: 16px;
-  }
-  .TabView figcaption {
-    font-size: 16px;
-  }
-}
 @media only screen and (max-width: 840px) {
-  .TabView:before {
-    padding-top: 23%;
-  }
-  .TabView .margin_1 {
-    margin-left: 0% !important;
-  }
   .TabView--Tab[data-active="true"] {
     display: inline-table;
     border-right: none;
-    width: calc(34% - 20px);
   }
   .TabView--Tab {
     display: none;
   }
-  .TabView--Tab:nth-child(5) {
+  .TabView--more {
     display: inline-table;
-  }
-  .TabView--Tab:nth-child(5):hover {
-    background: none;
-    width: calc(66% - 20px);
-    background-color: #4F575C;
-  }
-}
-@media only screen and (max-width: 570px) {
-  .TabView {
-    margin-bottom: -4px;
-  }
-  .TabView:before {
-    padding-top: 73%;
-  }
-  .TabView--Tab, .TabView--Tab[data-active="true"] {
-    width: calc(50% - 20px);
-    border-right: none;
-    padding-top: 12px;
-  }
-  .TabView--Views--Container {
-    height: 91%;
-    overflow: hidden;
-  }
-  .TabView--View--Content {
-    width: 50%;
-    height: 50%;
-  }
-  .TabView--View--Content img {
-    width: 100%;
-    margin-top: -4px;
-  }
-  .TabView--Tab:nth-child(5) {
-    width: calc(50% - 20px);
-  }
-  .TabView--Tab:nth-child(5):hover {
-    background: none;
-    width: calc(50% - 20px);
-    background-color: #dedede;
-  }
-}
-@media only screen and (max-width: 470px) {
-   .TabView--Header {
-    height: 20%;
-  }
-  .TabView--Views--Container {
-    height: 82%;
-    overflow: hidden;
   }
 }

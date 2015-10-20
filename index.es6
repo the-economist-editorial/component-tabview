@@ -9,12 +9,12 @@ export default class TabView extends React.Component {
   }
 
    constructor(props) {
-    super(props);
-    const selectedIndex = this.props.selectedIndex || 0;
-    this.state = {
-      selectedIndex,
-    };
-  }
+     super(props);
+     const selectedIndex = this.props.selectedIndex || 0;
+     this.state = {
+       selectedIndex,
+     };
+   }
 
   handleClick(selectedIndex) {
     if (selectedIndex >= this.props.children.length) {
@@ -35,13 +35,16 @@ export default class TabView extends React.Component {
                   <li
                     key={index} className="TabView--Tab"
                     data-active={this.state.selectedIndex === index}
-                    onClick={this.handleClick.bind(this, index) }>
+                    onClick={this.handleClick.bind(this, index)}
+                  >
                     {child.props.title}
                   </li>
                 );
               })}
-              <li onClick={this.handleClick.bind(this, (this.state.selectedIndex + 1)) }
-              className="TabView--Tab">More</li>
+              <li
+                onClick={this.handleClick.bind(this, (this.state.selectedIndex + 1))}
+                className="TabView--Tab TabView--more"
+              >More</li>
             </ul>
           </header>
           <div className="TabView--Views--Container">
@@ -51,7 +54,8 @@ export default class TabView extends React.Component {
                   <div
                     key={index}
                     className="TabView--View"
-                    data-active={this.state.selectedIndex === index}>
+                    data-active={this.state.selectedIndex === index}
+                  >
                     {child.props.children}
                   </div>
                 );
